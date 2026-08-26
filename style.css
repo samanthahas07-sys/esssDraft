@@ -85,7 +85,7 @@ body {
     height: 89vh;
     width: 100%;
     margin: 10px auto;
-    background: url('images/heroPic.png') no-repeat center center/cover;
+    background: url('heroPic.png') no-repeat center center/cover;
     position: relative;
     overflow: hidden;
 }
@@ -246,27 +246,27 @@ body {
 }
 
 .card-opfair .card-front {
-    background-image: url('images/opfairBannerFront.png');
+    background-image: url('opfairBannerFront.png');
 }
 
 .card-opfair .card-back {
-    background-image: url('images/opfairBannerBack.png');
+    background-image: url('opfairBannerBack.png');
 }
 
 .card-events .card-front {
-    background-image: url('images/eventBannerFront.png');
+    background-image: url('eventBannerFront.png');
 }
 
 .card-events .card-back {
-    background-image: url('images/eventBannerBack.jpeg');
+    background-image: url('eventBannerBack.jpeg');
 }
 
 .card-about .card-front {
-    background-image: url('images/aboutBannerFront.png');
+    background-image: url('aboutBannerFront.png');
 }
 
 .card-about .card-back {
-    background-image: url('images/aboutBannerBack.png');
+    background-image: url('aboutBannerBack.png');
 }
 
 .card.card-opfair.slide-in {
@@ -783,7 +783,7 @@ body.dark-mode {
 }
 
 body.dark-mode .hero {
-    background: url('images/heroPicDark.png') no-repeat center center;
+    background: url('heroPicDark.png') no-repeat center center;
     background-size: cover;
 }
 
