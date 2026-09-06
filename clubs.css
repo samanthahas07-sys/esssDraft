@@ -214,16 +214,17 @@ body.dark-mode .carousel-btn:hover {
 }
 
 @media (max-width: 768px) {
-    .clubs-hero-overlay {
-        padding: 40px 20px;
-    }
-
-    .clubs-hero-content h1 {
-        font-size: 2rem;
-    }
-
     .club-card {
-        width: 100%;
-        flex: 0 0 100%;
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .club-card img {
+        width: 85px;
+        height: 85px;
+    }
+
+    .club-card p {
+        font-size: 0.8rem;
     }
 }
