@@ -1,0 +1,315 @@
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 75px);
+    min-height: 400px;
+    background-image: url('guideHero2.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(32, 58, 108, 0.4);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    color: #ffffff;
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.guide-sections-container {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(60px) scale(0.96);
+    will-change: opacity, transform;
+}
+
+.guide-card {
+    background-color: #ffffff;
+    border: 2px solid #ccd3de;
+    border-radius: 10px;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.guide-card:hover {
+    border-color: #203a6c;
+}
+
+.card-content h2 {
+    font-size: 1.5rem;
+    color: #203a6c;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    color: #434656;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.prep-card-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.prep-resource-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: #f8fafc;
+    border: 1px solid #ccd3de;
+    border-radius: 10px;
+    padding: 16px 20px;
+    text-decoration: none;
+}
+
+.prep-resource-card:hover {
+    transform: translateY(-2px);
+    border-color: #203a6c;
+    background-color: #ffffff;
+}
+
+.prep-icon {
+    font-size: 1.4rem;
+    color: #203a6c;
+    background-color: #ccd3de;
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.prep-resource-card:hover .prep-icon {
+    background-color: #203a6c;
+    color: #ffffff;
+}
+
+.prep-info {
+    flex-grow: 1;
+}
+
+.prep-info h3 {
+    font-size: 1.05rem;
+    color: #203a6c;
+    margin-bottom: 4px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.external-indicator {
+    font-size: 0.75rem;
+    opacity: 0.6;
+}
+
+.prep-info p {
+    font-size: 0.9rem;
+    color: #434656;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.software-link-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin: 20px 0 16px 0;
+}
+
+.sw-link-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #f8fafc;
+    border: 1px solid #ccd3de;
+    border-radius: 10px;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.sw-link-card:hover {
+    transform: translateY(-2px);
+    border-color: #203a6c;
+    background-color: #ffffff;
+}
+
+.sw-link-icon {
+    font-size: 1.1rem;
+    color: #203a6c;
+    background-color: #ccd3de;
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.sw-link-card:hover .sw-link-icon {
+    background-color: #203a6c;
+    color: #ffffff;
+}
+
+.sw-link-text {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #203a6c;
+    gap: 10px;
+}
+
+.sw-link-text i {
+    font-size: 0.75rem;
+    opacity: 0.4;
+    transition: opacity 0.2s ease;
+    flex-shrink: 0;
+}
+
+.sw-link-card:hover .sw-link-text i {
+    opacity: 1;
+}
+
+.card-action {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 15px;
+}
+
+.concentration-btn {
+    display: inline-block;
+    background-color: #203a6c;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.concentration-btn:hover {
+    background-color: #384f75;
+    transform: translateY(-2px);
+}
+
+body.dark-mode .guide-card {
+    background-color: #121212;
+    border-color: #384f75;
+}
+
+body.dark-mode .card-content h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .card-content p {
+    color: #ccd3de;
+}
+
+body.dark-mode .guide-card:hover {
+    border-color: #8494ae;
+}
+
+body.dark-mode .prep-resource-card,
+body.dark-mode .sw-link-card {
+    background-color: #1a1a1a;
+    border-color: #384f75;
+}
+
+body.dark-mode .prep-resource-card:hover,
+body.dark-mode .sw-link-card:hover {
+    border-color: #8494ae;
+    background-color: #202a3c;
+}
+
+body.dark-mode .prep-icon,
+body.dark-mode .sw-link-icon {
+    background-color: #384f75;
+    color: #ffffff;
+}
+
+body.dark-mode .prep-resource-card:hover .prep-icon,
+body.dark-mode .sw-link-card:hover .sw-link-icon {
+    background-color: #203a6c;
+    color: #ffffff;
+}
+
+body.dark-mode .prep-info h3,
+body.dark-mode .sw-link-text {
+    color: #ffffff;
+}
+
+body.dark-mode .prep-info p {
+    color: #ccd3de;
+}
+
+body.dark-mode .concentration-btn {
+    background-color: #384f75;
+    color: #ffffff;
+}
+
+body.dark-mode .concentration-btn:hover {
+    background-color: #203a6c;
+}
+
+@media (max-width: 900px) {
+    .hero-section {
+        height: calc(100vh - 120px);
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .software-link-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .guide-card {
+        padding: 20px;
+    }
+
+    .concentration-btn {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+}
