@@ -12,9 +12,7 @@ body {
     color: #434656;
     overflow-x: hidden;
 }
-/* ==========================================
-   NAVBAR STYLES
-   ========================================== */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -81,7 +79,6 @@ body {
     transform: translateY(0);
 }
 
-/* Dropdown Menu Styles */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -146,7 +143,6 @@ body {
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-
 .dropdown-content a:hover {
     background-color: #284785;
     color: #ffffff;
@@ -156,9 +152,6 @@ body {
     display: block;
 }
 
-/* ==========================================
-   FOOTER STYLES
-   ========================================== */
 .site-footer {
     background-color: #203a6c;
     border-top: 1px solid #384f75;
@@ -236,10 +229,6 @@ body {
     color: #8494ae;
 }
 
-
-/* ==========================================
-   DARK MODE & RESPONSIVE OVERRIDES
-   ========================================== */
 body.dark-mode {
     background-color: #000000;
     color: #ccd3de;
@@ -292,20 +281,31 @@ body.dark-mode .dropdown-content a:hover {
         height: auto;
     }
 
+    .site-footer {
+        padding: 35px 20px;
+    }
+
     .footer-content {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 30px;
+        gap: 25px;
     }
 
     .footer-left-group {
         align-items: center;
+        width: 100%;
     }
 
     .footer-main-row {
         flex-direction: column;
+        align-items: center;
         text-align: center;
         gap: 15px;
+    }
+
+    .footer-socials {
+        margin-right: 0;
+        justify-content: center;
     }
 }
