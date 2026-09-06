@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SFU Engineering Science Student Society</title>
+    <link rel="stylesheet" href="navbar-footer.css">
+    <link rel="stylesheet" href="meetings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo-container" aria-label="Home">
+            <img src="navBarLogo.png" alt="SFU Engineering Science Student Society Logo" class="nav-logo">
+        </a>
+        <nav class="nav-links">
+            <div class="dropdown">
+                <a class="dropbtn">Get Involved</a>
+                <div class="dropdown-content">
+                    <a href="meetings.html">Meetings</a>
+                    <a href="clubs.html">Clubs and Teams</a>
+                    <a href="mentor.html">Mentorship Program</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a class="dropbtn">Resources</a>
+                <div class="dropdown-content">
+                    <a href="guide.html">ESSS Guide</a>
+                 <a href="courses.html">Course Information</a>
+                    <a href="scholarFunds.html">Scholarships and Funds</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a class="dropbtn">Events</a>
+                <div class="dropdown-content">
+                    <a href="events.html">Events</a>
+                    <a href="comp.html">Conferences and Competitions</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="merch.html" class="dropbtn">Merch</a>
+            </div>
+            <div class="dropdown">
+                <a href="sponsors.html" class="dropbtn">Our Partners</a>
+            </div>
+            <div class="dropdown">
+                <a class="dropbtn">About</a>
+                <div class="dropdown-content">
+                    <a href="about.html">About Us</a>
+                    <a href="location.html">Location</a>
+                </div>
+            </div>
+            <a href="contactUs.html">Contact Us</a>
+            <a href="#" id="darkModeToggle" aria-label="Toggle Dark Mode"><i class="fa-solid fa-moon"></i></a>
+        </nav>
+    </header>
+
+    <main class="meetings-main">
+        <div class="meetings-container">
+            <section class="meetings-header-section">
+                <h1>Meetings</h1>
+                <p class="meetings-subtext">Meeting times are set at the start of each semester, keep your eye out for an email about general meeting times if you want to give input on when you’re available.</p>
+            </section>
+
+            <div class="meetings-content-grid">
+                <div class="meeting-column">
+                    <h2>Meeting Information</h2>
+                    <div class="info-card">
+                        <div class="meeting-type-block">
+                            <div class="meeting-type-header">
+                                <h3>General Meetings</h3>
+                                <span class="meeting-badge">Open to All</span>
+                            </div>
+                            <ul class="meeting-details-list">
+                                <li><i class="fa-regular fa-calendar"></i> <strong>Fall 2026:</strong> TBD</li>
+                                <li><i class="fa-regular fa-clock"></i> Bi-weekly (check newsletters for reminders)</li>
+                                <li><i class="fa-solid fa-users"></i> All ENSC students (majors, minors, or in an ENSC class) have voting rights</li>
+                            </ul>
+                        </div>
+
+                        <div class="meeting-type-block">
+                            <div class="meeting-type-header">
+                                <h3>Executive Meetings</h3>
+                                <span class="meeting-badge">Exec Only Voting</span>
+                            </div>
+                            <ul class="meeting-details-list">
+                                <li><i class="fa-regular fa-calendar"></i> <strong>Fall 2026:</strong> TBD</li>
+                                <li><i class="fa-regular fa-clock"></i> Bi-weekly (alternate weeks of general meetings)</li>
+                                <li><i class="fa-solid fa-bullhorn"></i> Public meetings open to anyone to observe</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="meeting-column">
+                    <h2>Meeting Schedule</h2>
+                    <div class="meeting-card calendar-card">
+                        <div class="calendar-wrapper">
+                            <p>Fall 2026 Meeting Times TBD...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-left-group">
+                <h3><strong>SFU ESSS</strong></h3>
+                <div class="footer-main-row">
+                    <img src="circleLogo.png" alt="SFU ESSS Logo" class="footer-square-logo">
+                    <div class="address-box">
+                        <p>ESSS Office ASB 8834<br>
+                        8888 University Drive<br>
+                        Burnaby, BC V5A 1S6</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/company/sfu-engineering-science-student-society/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://discord.com/invite/ZmGR88pU8j" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                <a href="https://www.instagram.com/sfuengineers/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const toggleIcon = darkModeToggle.querySelector('i');
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.body.classList.add('dark-mode');
+            toggleIcon.classList.replace('fa-moon', 'fa-sun');
+        }
+
+        darkModeToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.body.classList.toggle('dark-mode');
+
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                toggleIcon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                localStorage.setItem('theme', 'light');
+                toggleIcon.classList.replace('fa-sun', 'fa-moon');
+            }
+        });
+    </script>
+</body>
+</html>

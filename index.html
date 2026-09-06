@@ -4,23 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SFU Engineering Science Student Society</title>
+    <link rel="stylesheet" href="navbar-footer.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <header class="navbar">
-        <div class="logo-container">
+        <a href="index.html" class="logo-container" aria-label="Home">
             <img src="navBarLogo.png" alt="SFU Engineering Science Student Society Logo" class="nav-logo">
-        </div>
+        </a>
         <nav class="nav-links">
-            <a href="#">Get Involved</a>
-            <a href="#">Courses</a>
-            <a href="#">Resources</a>
-            <a href="#">Events</a>
-            <a href="#">Merch</a>
-            <a href="#">About</a>
-            <a href="#">Contact Us</a>
+            <div class="dropdown">
+                <a class="dropbtn">Get Involved</a>
+                <div class="dropdown-content">
+                    <a href="meetings.html">Meetings</a>
+                    <a href="clubs.html">Clubs and Teams</a>
+                    <a href="mentor.html">Mentorship Program</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a class="dropbtn">Resources</a>
+                <div class="dropdown-content">
+                    <a href="guide.html">ESSS Guide</a>
+                    <a href="courses.html">Course Information</a>
+                    <a href="scholarFunds.html">Scholarships and Funds</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a class="dropbtn">Events</a>
+                <div class="dropdown-content">
+                    <a href="events.html">Events</a>
+                    <a href="comp.html">Conferences and Competitions</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="merch.html" class="dropbtn">Merch</a>
+            </div>
+            <div class="dropdown">
+                <a href="sponsors.html" class="dropbtn">Our Partners</a>
+            </div>
+            <div class="dropdown">
+                <a class="dropbtn">About</a>
+                <div class="dropdown-content">
+                    <a href="about.html">About Us</a>
+                    <a href="location.html">Location</a>
+                </div>
+            </div>
+            <a href="contactUs.html">Contact Us</a>
             <a href="#" id="darkModeToggle" aria-label="Toggle Dark Mode"><i class="fa-solid fa-moon"></i></a>
         </nav>
     </header>
@@ -37,7 +68,7 @@
     <main class="main-content">
 
         <section class="feature-cards">
-            <div class="card card-opfair">
+            <a href="http://opfair.ca" target="_blank" rel="noopener noreferrer" class="card card-opfair">
                 <div class="card-flipper">
                     <div class="card-front">
                         <div class="card-inner">
@@ -54,8 +85,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="card card-events">
+            </a>
+            <a href="events.html" class="card card-events">
                 <div class="card-flipper">
                     <div class="card-front">
                         <div class="card-inner">
@@ -72,8 +103,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="card card-about">
+            </a>
+            <a href="about.html" class="card card-about">
                 <div class="card-flipper">
                     <div class="card-front">
                         <div class="card-inner">
@@ -90,10 +121,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </a>
         </section>
 
-        <section class="calendar-image-row">
+        <section class="calendar-image-row scroll-animate">
             <div class="calendar-wrapper">
                 <h3>Calendar</h3>
                 <div class="events-list-container" id="upcomingEventsList">
@@ -103,27 +134,22 @@
 
             <div class="image-column-container">
                 <h3 class="section-title">Upcoming</h3>
-                <div class="news-card">
-                    <div class="news-image-side">
-                        <img src="eventB.png" alt="Latest News Event">
-                    </div>
-                    <div class="news-content-side">
-                        <h3>SUMMER BBQ</h3>
-                        <div class="news-body-group">
-                            <p class="news-intro">Join us for a fun and relaxing BBQ event filled with delicious food, great company, and good times! Enjoy freshly grilled burgers, hot dogs, and a variety of sides while spending time with friends and fellow community members. The event will feature music, games, and plenty of opportunities to socialize in a welcoming outdoor atmosphere. Whether you’re coming for the food, the activities, or simply to hang out, everyone is welcome to come and enjoy a memorable afternoon together.</p>
-                            <ul class="news-details">
-                                <li>📅 July 10th | ⏰ 1:00 PM – 4:30 PM</li>
-                                <li>📍 AQ Pond (Northside)</li>
-                                <li>🎉 What to expect: 🍔 Food, 🥤 Drinks, and 🎯 Games!</li>
-                            </ul>
-                            <p class="news-outro">We’d love to see you all there.</p>
+                <a href="events.html" class="upcoming-card">
+                    <div class="upcoming-image" style="background-image: url('froshAward.JPG');"></div>
+                    <div class="upcoming-content">
+                        <h2>Welcome Back, Engineers!</h2>
+                        <p class="upcoming-tagline">A new school year of events, resources, and community.</p>
+                        <div class="upcoming-badges">
+                            <span class="upcoming-badge">Frosh Events</span>
+                            <span class="upcoming-badge">New Website</span>
                         </div>
+                        <span class="upcoming-cta">See Events <span class="arrow">&rarr;</span></span>
                     </div>
-                </div>
+                </a>
             </div>
         </section>
 
-        <section class="gallery-section">
+        <section class="gallery-section scroll-animate">
             <h3>Gallery</h3>
             <div class="gallery-marquee-container">
                 <div class="gallery-track">
@@ -144,36 +170,73 @@
             </div>
         </section>
 
-        <section class="contact-section">
-            <div class="contact-info">
-                <h3>Contact Us</h3>
-                <p>Thank you for your interest in connecting with the SFU Engineering Society!</p>
-                <p>Whether you're a fellow student looking to get involved, an organization interested in collaboration, or a sponsor excited to support our initiatives, we'd love to hear from you.</p>
-            </div>
+        <section class="contact-section scroll-animate">
+            <div class="contact-container">
+                <div class="contact-left">
+                    <h1>Contact Us</h1>
+                    <p>Have a question, suggestion, or just want to get in touch? We'd love to hear from you!</p>
+                    <p class="email-list">
+                        <span class="copy-email" data-email="esss@sfu.ca" tabindex="0" role="button">esss@sfu.ca</span><br>
+                        <span class="copy-email" data-email="opfair@sfu.ca" tabindex="0" role="button">opfair@sfu.ca</span><br>
+                        <span class="copy-email" data-email="sponsorship@esss.ca" tabindex="0" role="button">sponsorship@esss.ca</span><br>
+                        <span class="copy-email" data-email="communcations@esss.ca" tabindex="0" role="button">communcations@esss.ca</span>
+                    </p>
 
-            <div class="contact-form-container">
-                <p class="form-instruction">Have a quick question or need some help? Drop your queries here!</p>
-                <form class="contact-form">
-                    <div class="form-group-row">
+                    <div class="social-links-list">
+                        <a href="https://discord.com/invite/ZmGR88pU8j" target="_blank" class="social-card discord">
+                            <i class="fab fa-discord"></i>
+                            <div>
+                                <h3>Discord</h3>
+                                <p>Join our community server</p>
+                            </div>
+                        </a>
+
+                        <a href="https://www.instagram.com/sfuengineers/" target="_blank" class="social-card instagram">
+                            <i class="fab fa-instagram"></i>
+                            <div>
+                                <h3>Instagram</h3>
+                                <p>Follow our latest updates & events</p>
+                            </div>
+                        </a>
+
+                        <a href="https://www.linkedin.com/company/sfu-engineering-science-student-society/" target="_blank" class="social-card linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                            <div>
+                                <h3>LinkedIn</h3>
+                                <p>Connect with our professional network</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-right">
+                    <form class="contact-form" action="https://formspree.io/f/xoeqnqjd" method="POST">
+                        <h2>Send Us a Message</h2>
+                        
                         <div class="form-group">
-                            <label for="first-name">First Name</label>
-                            <input type="text" id="first-name" placeholder="John" required>
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
                         </div>
+
                         <div class="form-group">
-                            <label for="last-name">Last Name</label>
-                            <input type="text" id="last-name" placeholder="Doe" required>
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="john@sfu.ca">
                         </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Type your message here..."></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+
+                    <div id="successMessage" class="success-message">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <h2>Submitted Successfully!</h2>
+                        <p>Thank you for getting in touch. Your message has been sent to the ESSS team and we will get back to you soon.</p>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="john.doe@example.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" rows="5" placeholder="How can we help you?" required></textarea>
-                    </div>
-                    <button type="submit" class="btn-send">Send Message</button>
-                </form>
+                </div>
             </div>
         </section>
 
@@ -224,6 +287,63 @@
             }
         });
 
+        const contactForm = document.querySelector('.contact-form');
+        const successMessage = document.getElementById('successMessage');
+
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const submitBtn = contactForm.querySelector('.submit-btn');
+            const originalBtnText = submitBtn.textContent;
+            
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+
+            const formData = new FormData(contactForm);
+
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    contactForm.style.display = 'none';
+                    successMessage.style.display = 'block';
+                } else {
+                    const data = await response.json();
+                    if (data.errors) {
+                        alert(data.errors.map(error => error.message).join(", "));
+                    } else {
+                        alert('Oops! There was a problem submitting your form.');
+                    }
+                    submitBtn.textContent = originalBtnText;
+                    submitBtn.disabled = false;
+                }
+            } catch (error) {
+                alert('Oops! There was a network error. Please try again.');
+                submitBtn.textContent = originalBtnText;
+                submitBtn.disabled = false;
+            }
+        });
+
+        document.querySelectorAll('.copy-email').forEach(item => {
+            item.addEventListener('click', function() {
+                const email = this.getAttribute('data-email');
+                navigator.clipboard.writeText(email).then(() => {
+                    const originalText = this.textContent;
+                    this.textContent = 'Copied!';
+                    setTimeout(() => {
+                        this.textContent = originalText;
+                    }, 1500);
+                }).catch(err => {
+                    console.error('Failed to copy email: ', err);
+                });
+            });
+        });
+
         const heroTitle = document.querySelector('.hero-overlay h1');
         if (heroTitle) {
             const htmlContent = heroTitle.innerHTML;
@@ -263,6 +383,30 @@
         document.querySelectorAll('.card').forEach(card => {
             cardsObserver.observe(card);
         });
+
+        const revealEls = Array.from(document.querySelectorAll('.scroll-animate'));
+
+        function updateReveal() {
+            const vh = window.innerHeight;
+            const start = vh * 0.9;
+            const end = vh * 0.4;
+
+            revealEls.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                let progress = (start - rect.top) / (start - end);
+                progress = Math.min(1, Math.max(0, progress));
+
+                el.style.opacity = progress;
+                el.style.transform = `translateY(${(1 - progress) * 60}px) scale(${0.96 + progress * 0.04})`;
+            });
+        }
+
+        updateReveal();
+        function revealLoop() {
+            updateReveal();
+            requestAnimationFrame(revealLoop);
+        }
+        requestAnimationFrame(revealLoop);
 
         async function loadGoogleCalendarEvents() {
             const container = document.getElementById('upcomingEventsList');
@@ -313,7 +457,7 @@
                         container.appendChild(eventItem);
                     });
                 } else {
-                    container.innerHTML = '<div class="event-loading">No upcoming events found.</div>';
+                    container.innerHTML = '<div class="event-loading">No events</div>';
                 }
             } catch (error) {
                 console.error('Error fetching Google Calendar events:', error);

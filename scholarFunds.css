@@ -1,0 +1,136 @@
+.main-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    min-height: calc(100vh - 250px);
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    color: #203a6c;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.page-header p {
+    font-size: 1.05rem;
+    color: #6c757d;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.funds-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.fund-card {
+    background-color: #f8f9fa;
+    border: 1px solid #203a6c;
+    border-left: 5px solid #203a6c;
+    border-radius: 8px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.card-content h2 {
+    font-size: 1.25rem;
+    color: #203a6c;
+    font-weight: 600;
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    color: #555c68;
+    line-height: 1.6;
+}
+
+.card-action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.concentration-btn {
+    display: inline-block;
+    background-color: #203a6c;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.concentration-btn:hover {
+    background-color: #284785;
+    transform: translateY(-2px);
+}
+
+body.dark-mode .page-header h1 {
+    color: #ffffff;
+}
+
+body.dark-mode .page-header p {
+    color: #8494ae;
+}
+
+body.dark-mode .fund-card {
+    background-color: #121212;
+    border-color: #2a3b5c;
+    border-left-color: #203a6c;
+}
+
+body.dark-mode .card-content h2 {
+    color: #ccd3de;
+}
+
+body.dark-mode .card-content p {
+    color: #9ba3af;
+}
+
+body.dark-mode .concentration-btn {
+    background-color: #384f75;
+    color: #ffffff;
+}
+
+body.dark-mode .concentration-btn:hover {
+    background-color: #203a6c;
+}
+
+@media (max-width: 768px) {
+    .funds-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .fund-card {
+        padding: 20px;
+        text-align: left;
+    }
+
+    .card-action-buttons {
+        flex-direction: column;
+    }
+
+    .concentration-btn {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+}
