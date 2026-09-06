@@ -1,0 +1,509 @@
+.courses-main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    min-height: 60vh;
+}
+
+.course-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+}
+
+.tab-btn {
+    background-color: #f1f5f9;
+    color: #434656;
+    border: 1px solid #cbd5e1;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.tab-btn:hover {
+    background-color: #e2e8f0;
+    color: #203a6c;
+}
+
+.tab-btn.active {
+    background-color: #203a6c;
+    color: #ffffff;
+    border-color: #203a6c;
+}
+
+.tab-content {
+    display: none;
+    padding: 10px 0;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content h2 {
+    color: #203a6c;
+    font-size: 1.75rem;
+    margin-bottom: 15px;
+}
+
+.tab-content p {
+    color: #64748b;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.tutoring-main-title {
+    color: #203a6c;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.tutoring-hero-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.tutoring-visual-showcase {
+    display: flex;
+    justify-content: center;
+}
+
+.tutoring-preview-card {
+    position: relative;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 12px;
+}
+
+.tutoring-preview-card img {
+    width: 100%;
+    max-width: 480px;
+    height: 280px;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+}
+
+.tutoring-info-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tutoring-perk-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+}
+
+.perk-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.tutoring-perk-box h3 {
+    font-size: 1.05rem;
+    color: #203a6c;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.tutoring-perk-box p {
+    font-size: 0.9rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin: 0 0 14px 0;
+}
+
+.card-action {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 5px;
+}
+
+.concentration-btn {
+    display: inline-block;
+    background-color: #203a6c;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.concentration-btn:hover {
+    background-color: #284785;
+    transform: translateY(-2px);
+}
+
+.planning-intro {
+    margin-bottom: 25px;
+}
+
+.planning-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.planning-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 24px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.planning-card:hover {
+    transform: translateY(-3px);
+    border-color: #203a6c;
+}
+
+.planning-icon {
+    font-size: 1.8rem;
+    color: #203a6c;
+    margin-bottom: 12px;
+}
+
+.planning-card h3 {
+    font-size: 1.15rem;
+    color: #203a6c;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.planning-card p {
+    font-size: 0.9rem;
+    color: #64748b;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.faq-container {
+    margin: 30px 0 45px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.faq-item {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 18px 20px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #203a6c;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-question:hover {
+    background-color: #f8fafc;
+}
+
+.faq-question i {
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    background-color: #ffffff;
+}
+
+.faq-answer p {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+.faq-link {
+    color: #203a6c;
+    font-weight: 500;
+    text-decoration: none;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+}
+
+.faq-link:hover {
+    text-decoration: underline;
+    background: none;
+    color: #203a6c;
+}
+
+.contacts-section {
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.contacts-section > h3 {
+    font-size: 1.5rem;
+    color: #203a6c;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.contact-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-card h4 {
+    font-size: 1.1rem;
+    color: #203a6c;
+    margin-bottom: 10px;
+}
+
+.copy-email-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+    display: inline-block;
+    cursor: pointer;
+    text-align: left;
+    width: fit-content;
+}
+
+.email-text {
+    font-size: 0.95rem;
+    color: #203a6c;
+    font-weight: 500;
+    font-family: inherit;
+    text-decoration: none;
+}
+
+.copy-email-btn:hover .email-text {
+    text-decoration: underline;
+}
+
+.contact-card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-card ul li {
+    font-size: 0.9rem;
+    color: #64748b;
+    line-height: 1.4;
+}
+
+body.dark-mode .course-tabs {
+    border-bottom-color: #384f75;
+}
+
+body.dark-mode .tab-btn {
+    background-color: #1a1a1a;
+    color: #ccd3de;
+    border-color: #384f75;
+}
+
+body.dark-mode .tab-btn:hover {
+    background-color: #284785;
+    color: #ffffff;
+}
+
+body.dark-mode .tab-btn.active {
+    background-color: #284785;
+    color: #ffffff;
+    border-color: #384f75;
+}
+
+body.dark-mode .tutoring-main-title,
+body.dark-mode .tab-content h2,
+body.dark-mode .contacts-section > h3,
+body.dark-mode .contact-card h4 {
+    color: #ffffff;
+}
+
+body.dark-mode .tab-content p,
+body.dark-mode .contact-card ul li {
+    color: #94a3b8;
+}
+
+body.dark-mode .faq-link {
+    background: none;
+    color: #ccd3de;
+}
+
+body.dark-mode .faq-link:hover {
+    background: none;
+    color: #ccd3de;
+    text-decoration: underline;
+}
+
+body.dark-mode .email-text {
+    color: #ccd3de;
+}
+
+body.dark-mode .contacts-section {
+    border-top-color: #384f75;
+}
+
+body.dark-mode .contact-card {
+    background-color: #121212;
+    border-color: #384f75;
+}
+
+body.dark-mode .tutoring-preview-card,
+body.dark-mode .tutoring-perk-box {
+    background-color: #121212;
+    border-color: #384f75;
+}
+
+body.dark-mode .tutoring-perk-box:hover {
+    border-color: #60a5fa;
+}
+
+body.dark-mode .tutoring-perk-box h3 {
+    color: #ffffff;
+}
+
+body.dark-mode .tutoring-perk-box p {
+    color: #94a3b8;
+}
+
+body.dark-mode .concentration-btn {
+    background-color: #384f75;
+    color: #ffffff;
+}
+
+body.dark-mode .concentration-btn:hover {
+    background-color: #203a6c;
+}
+
+body.dark-mode .planning-card {
+    background-color: #121212;
+    border-color: #384f75;
+}
+
+body.dark-mode .planning-card:hover {
+    border-color: #60a5fa;
+}
+
+body.dark-mode .planning-card h3 {
+    color: #ffffff;
+}
+
+body.dark-mode .planning-icon {
+    color: #60a5fa;
+}
+
+body.dark-mode .faq-item {
+    background-color: #121212;
+    border-color: #384f75;
+}
+
+body.dark-mode .faq-question {
+    color: #ffffff;
+}
+
+body.dark-mode .faq-question:hover {
+    background-color: #1a1a1a;
+}
+
+body.dark-mode .faq-question i {
+    color: #94a3b8;
+}
+
+body.dark-mode .faq-answer {
+    background-color: #121212;
+}
+
+body.dark-mode .faq-answer p {
+    color: #94a3b8;
+}
+
+@media (max-width: 900px) {
+    .contacts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tutoring-hero-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .tutoring-preview-card img {
+        max-width: 100%;
+        height: 240px;
+    }
+}
+
+@media (max-width: 768px) {
+    .course-tabs {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .tab-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .tutoring-main-title {
+        text-align: center;
+    }
+
+    .planning-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .concentration-btn {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+}

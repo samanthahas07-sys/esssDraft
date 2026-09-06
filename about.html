@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - SFU Engineering Science Student Society</title>
+    <link rel="stylesheet" href="navbar-footer.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo-container" aria-label="Home">
+            <img src="navBarLogo.png" alt="SFU Engineering Science Student Society Logo" class="nav-logo">
+        </a>
+        <nav class="nav-links">
+            <div class="dropdown">
+                <a class="dropbtn">Get Involved</a>
+                <div class="dropdown-content">
+                    <a href="meetings.html">Meetings</a>
+                    <a href="clubs.html">Clubs and Teams</a>
+                    <a href="mentor.html">Mentorship Program</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a class="dropbtn">Resources</a>
+                <div class="dropdown-content">
+                    <a href="guide.html">ESSS Guide</a>
+                    <a href="courses.html">Course Information</a>
+                    <a href="scholarFunds.html">Scholarships and Funds</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a class="dropbtn">Events</a>
+                <div class="dropdown-content">
+                    <a href="events.html">Events</a>
+                    <a href="comp.html">Conferences and Competitions</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="merch.html" class="dropbtn">Merch</a>
+            </div>
+            <div class="dropdown">
+                <a href="sponsors.html" class="dropbtn">Our Partners</a>
+            </div>
+            <div class="dropdown">
+                <a class="dropbtn">About</a>
+                <div class="dropdown-content">
+                    <a href="about.html">About Us</a>
+                    <a href="location.html">Location</a>
+                </div>
+            </div>
+            <a href="contactUs.html">Contact Us</a>
+            <a href="#" id="darkModeToggle" aria-label="Toggle Dark Mode"><i class="fa-solid fa-moon"></i></a>
+        </nav>
+    </header>
+
+    <main class="about-main">
+        <section class="about-section">
+            <h2 class="section-title">Our Mission</h2>
+            <p class="section-subtitle">The Engineering Science Student Society (ESSS) is a Department Student Union dedicated to supporting SFU engineering students academically, personally, and professionally. We enhance student life through events, educational resources, and community initiatives, while mediating between students and university administration. We also represent SFU nationally as partners with the CFES and WESST, advocating for student interests and engineering accreditation.</p>
+        </section>
+
+        <section class="about-section">
+            <h2 class="section-title">Our Team</h2>
+            <p class="section-subtitle">Our society is run by dedicated student leaders who work year-round to serve the ENSC community. Hover over any member to view their details on the side panel.</p>
+
+            <div class="team-category">
+                <h3>President and Vice Presidents</h3>
+                <div class="team-interactive-wrapper">
+                    <div class="team-grid">
+                        <script>
+                            const execData = [
+                                { 
+                                    role: "President", 
+                                    name: "Noah Thomson", 
+                                    img: "pres.jpg", 
+                                    desc: "The president guides the executive council, chairs all meetings and is the official spokesperson for the ESSS. They also enforce and maintain the Constitution, Bylaws, and Policy Manual of the ESSS. Contact through president@esss.ca" 
+                                },
+                                { 
+                                    role: "VP Administration", 
+                                    name: "Daniel Skournik", 
+                                    img: "vpAdmin.jpg", 
+                                    desc: "The VP Admin oversees access of the ESSS physical and digital spaces, acts as Secretary for all meetings, maintains documentation and archival media of the ESSS, maintains and oversees the ESSS’s website, email server, and social media, and oversees the roles and responsibilities of the Directors of Common Room and Website. Contact through admin@esss.ca" 
+                                },
+                                { 
+                                    role: "VP Internal", 
+                                    name: "Lexiss Leung", 
+                                    img: "vpInternal.avif", 
+                                    desc: "The VP Internal presents topics from SFSS Council meetings to the Members at Regular meetings, provides representation of the ESSS to the SFSS Council, and liaises with Engineering Clubs. Contact through internal@esss.ca" 
+                                },
+                                { 
+                                    role: "VP External", 
+                                    name: "Jihee Ryu", 
+                                    img: "", 
+                                    desc: "The VP External liaises with the CFES, WESST, and EGBC, oversees the coordination of the Iron Ring ceremony, oversees the organization of the SFU Engineering Competition, forms a committee of ESSS members for the purpose of selecting conference delegates, and oversees the roles and responsibilities of the Directors of OpFair and Diversity. Contact through external@esss.ca" 
+                                },
+                                { 
+                                    role: "VP Finance", 
+                                    name: "Rohin Gill", 
+                                    img: "vpFinance.avif", 
+                                    desc: "The VP Finance manages the writing and approval of grants, liaises with the bank that holds the ESSS’s external account, prepares the budget for the fiscal year and analyzes the previous year’s budget, maintains financial records and accounts, oversees the purchase and sale of merchandise, and oversees the roles and responsibilities of the Directors of Merchandise and Sponsorship. Contact through finance@esss.ca" 
+                                },
+                                { 
+                                    role: "VP Social", 
+                                    name: "Kayla Lee", 
+                                    img: "vpSocial.jpg", 
+                                    desc: "The VP Social forms event committees with Representatives and Society Members when necessary for an event, promotes events and services offered by the ESSS, organizes and fills an events calendar for their upcoming term, and oversees the role and responsibility of the Director of Spirit. Contact through social@esss.ca" 
+                                },
+                                { 
+                                    role: "VP Academic", 
+                                    name: "Annika Wong", 
+                                    img: "vpAcademic.jpg", 
+                                    desc: "The VP Academic oversees the administration of ESSEF grants, oversees the ESSEF Parts Library, attends all Undergraduate Curriculum Committee meetings, surveys Members for academic concerns to be brought to Undergraduate Curriculum Committee meetings, and oversees the role and responsibility of the Director of Resource Centre. Contact through academic@esss.ca" 
+                                }
+                            ];
+
+                            execData.forEach((item) => {
+                                const imgSrc = (item.img && item.img.trim() !== "") ? item.img : "circleLogo.png";
+                                document.write(`
+                                    <div class="team-card" data-name="${item.name}" data-role="${item.role}" data-desc="${item.desc}">
+                                        <div class="team-avatar-wrapper">
+                                            <img src="${imgSrc}" alt="${item.role}" class="team-avatar" onerror="this.onerror=null; this.src='circleLogo.png';">
+                                        </div>
+                                        <h4 class="team-role-title">${item.role}</h4>
+                                    </div>
+                                `);
+                            });
+                        </script>
+                    </div>
+                    <div class="team-side-panel has-active">
+                        <div class="side-panel-content">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-category">
+                <h3>Directors</h3>
+                <div class="team-interactive-wrapper">
+                    <div class="team-grid">
+                        <script>
+                            const directorData = [
+                                { 
+                                  role: "Director of Common Room", 
+                                  name: "Lukas Hilton", 
+                                  img: "directCommonRoomOne.jpg",
+                                  desc: "Assists the VP Social and VP Administration, oversees maintenance and improvement of the ESSS Common Room." 
+                                },
+                                { 
+                                  role: "Director of Common Room", 
+                                  name: "Ryan Plican",
+                                  img: "",
+                                  desc: "Assists the VP Social and VP Administration, oversees maintenance and improvement of the ESSS Common Room." 
+                                },
+                                { 
+                                  role: "Director of Merchandise", 
+                                  name: "Maryam Mirzayeva",
+                                  img: "directMerch.jpg", 
+                                  desc: "Assists the VP Administration and VP Finance, oversees the sales and inventory of all ESSS merchandise, designs new merchandise for ESSS." 
+                                },
+                                { 
+                                  role: "Director of Spirit", 
+                                  name: "Brent Aguirre",
+                                  img: "directSpiritOne.jpg",
+                                  desc: "Assists VP Social, manages ESSS Social Media such as Facebook, Instagram, Twitter, and Discord, creates promotional material for events offline and online, and updates the Lab 1 Display Case." 
+                                },
+                                { 
+                                  role: "Director of Spirit", 
+                                  name: "Laksh Soni",
+                                  img: "directSpiritTwo.jpg",
+                                  desc: "Assists VP Social, manages ESSS Social Media such as Facebook, Instagram, Twitter, and Discord, creates promotional material for events offline and online, and updates the Lab 1 Display Case." 
+                                },
+                                { 
+                                  role: "Director of Spirit", 
+                                  name: "Aria Law",
+                                  img: "directSpiritThree.jpg",
+                                  desc: "Assists VP Social, manages ESSS Social Media such as Facebook, Instagram, Twitter, and Discord, creates promotional material for events offline and online, and updates the Lab 1 Display Case." 
+                                },
+                                { 
+                                  role: "Director of OpFair", 
+                                  name: "Angus Gardner", 
+                                  img: "directOpFair.jpg",
+                                  desc: "Oversees the planning of the annual OpFair, including the coordination of the planning committee and volunteers." 
+                                },
+                                { 
+                                  role: "Director of Resources", 
+                                  name: "Omar Mohamed", 
+                                  img: "directResourceOne.jpg",
+                                  desc: "Assists VP Academic, maintains and operates the ESSS 3D Printer, handles 3D printing requests and orders, assists in the prototype development of student projects, and informs and educates the student body about 3D printing technology." 
+                                },
+                                { 
+                                  role: "Director of Resources", 
+                                  name: "Amytis Saghafi",
+                                  img: "",
+                                  desc: "Assists VP Academic, maintains and operates the ESSS 3D Printer, handles 3D printing requests and orders, assists in the prototype development of student projects, and informs and educates the student body about 3D printing technology." 
+                                },
+                                { 
+                                  role: "Director of Website", 
+                                  name: "Samantha Huang", 
+                                  img: "directWebsiteOne.jpg",
+                                  desc: "Adds content and improves the design of the ESSS Websites. The coolest position :)" 
+                                },
+                                { 
+                                  role: "Director of Website", 
+                                  name: "Ira Batra", 
+                                  img: "",
+                                  desc: "Adds content and improves the design of the ESSS Websites. The coolest position :)" 
+                                },
+                                { 
+                                  role: "Director of Graphic Design", 
+                                  name: "Katherine Zhang", 
+                                  img: "directGraphic.jpg",
+                                  desc: "Creates graphic designs for promotional and informational materials, maintains ESSS branding standards, and supports the VP Social, Directors, and Committees." 
+                                },
+                                { 
+                                  role: "Director of Student Support", 
+                                  name: "Natasha Wilson",
+                                  img: "directStudentOne.jpg",
+                                  desc: "Supports tutoring, mentorship, and student support programs. Assists with student concerns referred by the VP Academic as well as maintains appropriate support and referral documentation." 
+                                },
+                                { 
+                                  role: "Director of Student Support", 
+                                  name: "Rojin Khanafshar", 
+                                  img: "",
+                                  desc: "Supports tutoring, mentorship, and student support programs. Assists with student concerns referred by the VP Academic as well as maintains appropriate support and referral documentation." 
+                                },
+                                { 
+                                  role: "Director of Sponsorship", 
+                                  name: "Alina Beg",
+                                  img: "directSponsorOne.jpg",
+                                  desc: "Retains existing sponsorships and acquires new ones. Communicates with corporate partners and sponsors to support ESSS events and initiatives. Maintains sponsorship agreements, records, and documentation." 
+                                },
+                                { 
+                                  role: "Director of Sponsorship", 
+                                  name: "Trevor Kwong", 
+                                  img: "directSponsorTwo.jpg",
+                                  desc: "Retains existing sponsorships and acquires new ones. Communicates with corporate partners and sponsors to support ESSS events and initiatives. Maintains sponsorship agreements, records, and documentation." 
+                                }
+                            ];
+
+                            directorData.forEach((item) => {
+                                const imgSrc = (item.img && item.img.trim() !== "") ? item.img : "circleLogo.png";
+                                document.write(`
+                                    <div class="team-card" data-name="${item.name}" data-role="${item.role}" data-desc="${item.desc}">
+                                        <div class="team-avatar-wrapper">
+                                            <img src="${imgSrc}" alt="${item.role}" class="team-avatar" onerror="this.onerror=null; this.src='circleLogo.png';">
+                                        </div>
+                                        <h4 class="team-role-title">${item.role}</h4>
+                                    </div>
+                                `);
+                            });
+                        </script>
+                    </div>
+                    <div class="team-side-panel has-active">
+                        <div class="side-panel-content">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-category">
+                <h3>Representatives</h3>
+                <div class="team-interactive-wrapper">
+                    <div class="team-grid">
+                        <script>
+                            const repData = [
+                                { role: "First-Year Rep", name: "", img: "", desc: "Serves as the liaison between the Executive Council and their respective concentration. Volunteers, organizes, and announces events managed by the Executive Council." },
+                                { role: "First-Year Rep", name: "", img: "", desc: "Serves as the liaison between the Executive Council and their respective concentration. Volunteers, organizes, and announces events managed by the Executive Council." },
+                                { role: "First-Year Rep", name: "", img: "", desc: "Serves as the liaison between the Executive Council and their respective concentration. Volunteers, organizes, and announces events managed by the Executive Council." },
+                                { role: "First-Year Rep", name: "", img: "", desc: "Serves as the liaison between the Executive Council and their respective concentration. Volunteers, organizes, and announces events managed by the Executive Council." },
+                                { role: "Second-Year Rep", name: "", img: "", desc: "Serves as the liaison between the Executive Council and their respective concentration. Volunteers, organizes, and announces events managed by the Executive Council." },
+                                { role: "Second-Year Rep", name: "", img: "", desc: "Serves as the liaison between the Executive Council and their respective concentration. Volunteers, organizes, and announces events managed by the Executive Council." },
+                                { role: "Computer Engineering Rep", name: "Salem Alsaiari", img: "", desc: "Serves as the liaison between the Executive Council and their respective concentration. Volunteers, organizes, and announces events managed by the Executive Council." },
+                                { role: "Biomedical Engineering Rep", name: "Meriel Mangilin", img: "bioRep.avif", desc: "Serves as the liaison between the Executive Council and their respective concentration. Volunteers, organizes, and announces events managed by the Executive Council." },
+                                { role: "Engineering Physics Rep", name: "Vishnu Gunja", img: "", desc: "Serves as the liaison between the Executive Council and their respective concentration. Volunteers, organizes, and announces events managed by the Executive Council." },
+                                { role: "Systems Engineering Rep", name: "Annie Vong", img: "", desc: "Serves as the liaison between the Executive Council and their respective concentration. Volunteers, organizes, and announces events managed by the Executive Council." },
+                                { role: "Electronics Engineering Rep", name: "Anson Wong", img: "", desc: "Serves as the liaison between the Executive Council and their respective concentration. Volunteers, organizes, and announces events managed by the Executive Council." },
+                                { role: "International Student Rep", name: "Sadman Sakib", img: "", desc: "Serves as the liaison between the Executive Council and their respective concentration. Volunteers, organizes, and announces events managed by the Executive Council." }
+                            ];
+
+                            repData.forEach((item) => {
+                                const imgSrc = (item.img && item.img.trim() !== "") ? item.img : "circleLogo.png";
+                                document.write(`
+                                    <div class="team-card" data-name="${item.name}" data-role="${item.role}" data-desc="${item.desc}">
+                                        <div class="team-avatar-wrapper">
+                                            <img src="${imgSrc}" alt="${item.role}" class="team-avatar" onerror="this.onerror=null; this.src='circleLogo.png';">
+                                        </div>
+                                        <h4 class="team-role-title">${item.role}</h4>
+                                    </div>
+                                `);
+                            });
+                        </script>
+                    </div>
+                    <div class="team-side-panel has-active">
+                        <div class="side-panel-content">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <h2 class="section-title">Documents</h2>
+            <p class="section-subtitle">Interested in learning more about ESSS policies or some of the other societies we are part of? Looking for commonly used forms in ENSC? Check below for all of the above!</p>
+
+            <div class="documents-container">
+                <div class="doc-group">
+                    <h3>ESSS Documents</h3>
+                    <ul class="doc-list">
+                        <li><a href="https://www.esss.ca/_files/ugd/b80c7c_d7ca56e06f7f4c5c86ed6c39ce604459.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i>Constitution</a></li>
+                        <li><a href="https://www.esss.ca/_files/ugd/b80c7c_0763c557cea248889eb4a03ae44d8a56.pdf" target="_blank"><i class="fa-solid fa-file-lines"></i>Policy</a></li>
+                        <li><a href="https://www.esss.ca/_files/ugd/b80c7c_9e9741fe06284f8093be5417346c1d7f.pdf" target="_blank"><i class="fa-solid fa-file-excel"></i>Bylaws</a></li>
+                        <li><a href="https://www.esss.ca/_files/ugd/b80c7c_0183d3493a4643b6821fde39c60ae124.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i>Guidelines</a></li>
+                    </ul>
+                </div>
+                <div class="doc-group">
+                    <h3>WESST Documents</h3>
+                    <ul class="doc-list text-doc-list">
+                        <li>WESST's Constitution, Policy Manual, and Agreements can be found in the <a href="https://www.wesst.ca/documents" target="_blank">WESST Documents</a>.</li>
+                    </ul>
+                </div>
+                <div class="doc-group">
+                    <h3>CFES Documents</h3>
+                    <ul class="doc-list text-doc-list">
+                        <li>CFES Governing Documents can be found on the <a href="https://cfes.ca/resources/" target="_blank">CFES website Resources page</a>.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-left-group">
+                <h3><strong>SFU ESSS</strong></h3>
+                <div class="footer-main-row">
+                    <img src="circleLogo.png" alt="SFU ESSS Logo" class="footer-square-logo">
+                    <div class="address-box">
+                        <p>ESSS Office ASB 8834<br>
+                        8888 University Drive<br>
+                        Burnaby, BC V5A 1S6</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/company/sfu-engineering-science-student-society/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://discord.com/invite/ZmGR88pU8j" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                <a href="https://www.instagram.com/sfuengineers/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const toggleIcon = darkModeToggle.querySelector('i');
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.body.classList.add('dark-mode');
+            toggleIcon.classList.replace('fa-moon', 'fa-sun');
+        }
+
+        darkModeToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.body.classList.toggle('dark-mode');
+
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                toggleIcon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                localStorage.setItem('theme', 'light');
+                toggleIcon.classList.replace('fa-sun', 'fa-moon');
+            }
+        });
+
+        document.querySelectorAll('.team-interactive-wrapper').forEach(wrapper => {
+            const teamCards = wrapper.querySelectorAll('.team-card');
+            const sidePanelContent = wrapper.querySelector('.side-panel-content');
+
+            function displayCardInfo(card) {
+                const name = card.getAttribute('data-name').trim() !== "" ? card.getAttribute('data-name') : "Vacant";
+                const role = card.getAttribute('data-role');
+                const desc = card.getAttribute('data-desc').trim() !== "" ? card.getAttribute('data-desc') : "Description coming soon...";
+
+                sidePanelContent.innerHTML = `
+                    <div class="side-member-card">
+                        <span class="side-role">${role}</span>
+                        <h3 class="side-name">${name}</h3>
+                        <p class="side-desc">${desc}</p>
+                    </div>
+                `;
+            }
+
+            if (teamCards.length > 0) {
+                displayCardInfo(teamCards[0]);
+            }
+
+            teamCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    displayCardInfo(card);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

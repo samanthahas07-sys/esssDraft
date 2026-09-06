@@ -1,0 +1,229 @@
+.clubs-main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.clubs-hero {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 60px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.clubs-hero-overlay {
+    background: linear-gradient(135deg, rgba(32, 58, 108, 0.88) 0%, rgba(79, 113, 182, 0.92) 150%);
+    padding: 60px 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.clubs-hero-content {
+    max-width: 700px;
+}
+
+.clubs-hero-content h1 {
+    font-size: 2.6rem;
+    color: #ffffff;
+    margin-bottom: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.clubs-hero-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ccd3de;
+}
+
+.clubs-list-section {
+    margin-top: 40px;
+}
+
+.clubs-list-section h2 {
+    font-size: 2rem;
+    color: #203a6c;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.clubs-carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.clubs-grid {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.club-card {
+    background: #ffffff;
+    border: 1px solid #ccd3de;
+    border-radius: 10px;
+    width: calc((100% - 40px) / 3);
+    flex: 0 0 calc((100% - 40px) / 3);
+    overflow: hidden;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    padding: 18px;
+    gap: 16px;
+    box-sizing: border-box;
+}
+
+.club-card.active {
+    display: flex;
+}
+
+.club-card:hover {
+    transform: translateY(-5px);
+}
+
+.club-card-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.club-card img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+.club-socials {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.club-socials a {
+    color: #203a6c;
+    font-size: 1.05rem;
+}
+
+.club-socials a:hover {
+    color: #8494ae;
+    transform: translateY(-2px);
+}
+
+.club-card-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    text-align: center;
+    min-width: 0;
+}
+
+.club-card h3 {
+    font-size: 1.05rem;
+    color: #203a6c;
+    margin-bottom: 6px;
+    font-weight: 600;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.club-card p {
+    font-size: 0.85rem;
+    color: #434656;
+    line-height: 1.4;
+    margin: 0;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.carousel-btn {
+    background-color: #203a6c;
+    color: #ffffff;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background-color: #384f75;
+    transform: scale(1.05);
+}
+
+body.dark-mode .clubs-list-section h2,
+body.dark-mode .club-card h3 {
+    color: #ffffff;
+}
+
+body.dark-mode .club-card {
+    background-color: #121212;
+    border-color: #384f75;
+}
+
+body.dark-mode .club-card p {
+    color: #ccd3de;
+}
+
+body.dark-mode .club-socials a {
+    color: #ccd3de;
+}
+
+body.dark-mode .club-socials a:hover {
+    color: #8494ae;
+}
+
+body.dark-mode .carousel-btn {
+    background-color: #384f75;
+    color: #ffffff;
+}
+
+body.dark-mode .carousel-btn:hover {
+    background-color: #203a6c;
+}
+
+@media (max-width: 1024px) {
+    .club-card {
+        width: calc((100% - 20px) / 2);
+        flex: 0 0 calc((100% - 20px) / 2);
+    }
+}
+
+@media (max-width: 768px) {
+    .clubs-hero-overlay {
+        padding: 40px 20px;
+    }
+
+    .clubs-hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .club-card {
+        width: 100%;
+        flex: 0 0 100%;
+    }
+}

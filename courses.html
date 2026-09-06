@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SFU Engineering Science Student Society</title>
+    <link rel="stylesheet" href="navbar-footer.css">
+    <link rel="stylesheet" href="courses.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo-container" aria-label="Home">
+            <img src="navBarLogo.png" alt="SFU Engineering Science Student Society Logo" class="nav-logo">
+        </a>
+        <nav class="nav-links">
+            <div class="dropdown">
+                <a class="dropbtn">Get Involved</a>
+                <div class="dropdown-content">
+                    <a href="meetings.html">Meetings</a>
+                    <a href="clubs.html">Clubs and Teams</a>
+                    <a href="mentor.html">Mentorship Program</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a class="dropbtn">Resources</a>
+                <div class="dropdown-content">
+                    <a href="guide.html">ESSS Guide</a>
+                    <a href="courses.html">Course Information</a>
+                    <a href="scholarFunds.html">Scholarships and Funds</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a class="dropbtn">Events</a>
+                <div class="dropdown-content">
+                    <a href="events.html">Events</a>
+                    <a href="comp.html">Conferences and Competitions</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="merch.html" class="dropbtn">Merch</a>
+            </div>
+            <div class="dropdown">
+                <a href="sponsors.html" class="dropbtn">Our Partners</a>
+            </div>
+            <div class="dropdown">
+                <a class="dropbtn">About</a>
+                <div class="dropdown-content">
+                    <a href="about.html">About Us</a>
+                    <a href="location.html">Location</a>
+                </div>
+            </div>
+            <a href="contactUs.html">Contact Us</a>
+            <a href="#" id="darkModeToggle" aria-label="Toggle Dark Mode"><i class="fa-solid fa-moon"></i></a>
+        </nav>
+    </header>
+
+    <main class="courses-main">
+        <div class="course-tabs">
+            <button class="tab-btn active" onclick="switchTab(event, 'tutoring')">Tutoring</button>
+            <button class="tab-btn" onclick="switchTab(event, 'planning')">Planning Resources</button>
+            <button class="tab-btn" onclick="switchTab(event, 'faq')">FAQ</button>
+        </div>
+
+        <section id="tutoring" class="tab-content active">
+            <h2 class="tutoring-main-title">Tutoring Information</h2>
+            
+            <div class="tutoring-hero-layout">
+                <div class="tutoring-visual-showcase">
+                    <div class="tutoring-preview-card">
+                        <img src="tutorCalendar.png" alt="Tutoring session calendar">
+                    </div>
+                </div>
+
+                <div class="tutoring-info-stack">
+                    <div class="tutoring-perk-box">
+                        <div class="perk-content">
+                            <h3>Get Support</h3>
+                            <p>Get weekly help directly from senior ENSC students.</p>
+                            <div class="card-action">
+                                <a href="https://canvas.sfu.ca/enroll/7TDB4F" target="_blank" rel="noopener noreferrer" class="concentration-btn">Check out Canvas</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tutoring-perk-box">
+                        <div class="perk-content">
+                            <h3>Become a Tutor</h3>
+                            <p>Become a tutor, gain official university recognition, and build your resume.</p>
+                            <div class="card-action">
+                                <a href="http://www.sfu.ca/students/get-involved/recognition/co-curricular-record" target="_blank" rel="noopener noreferrer" class="concentration-btn">Check out CCR</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="planning" class="tab-content">
+            <h2>Course Planning Resources</h2>
+            <p class="planning-intro">Resources and guides by FAS to map out your degree path.</p>
+            
+            <div class="planning-grid">
+                <a href="https://www.sfu.ca/fas/study/current-students/school-of-engineering-science/undergraduates/program-requirements.html" class="planning-card">
+                    <div class="planning-icon"><i class="fa-solid fa-calendar-days"></i></div>
+                    <h3>ENSC Course Schedule</h3>
+                    <p>Current term offerings and timing.</p>
+                </a>
+
+                <a href="https://www.sfu.ca/fas/study/current-students/school-of-engineering-science/undergraduates/program-requirements/preapproved-electives.html" class="planning-card">
+                    <div class="planning-icon"><i class="fa-solid fa-list-check"></i></div>
+                    <h3>Pre-Approved Electives</h3>
+                    <p>Complementary elective options list.</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="faq" class="tab-content">
+            <h2>Course Scheduling FAQ</h2>
+            <p>Have questions about prerequisites, waitlists, or course overrides? Check our frequently asked questions here.</p>
+        
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">This is my first time enrolling in an upper-division course, and my enrollment was not processed?<i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p>You must declare your concentration before enrolling in upper division courses. Please fill out this <a href="https://coursys.sfu.ca/forms/ensc-declare-ensc-option/" target="_blank" rel="noopener noreferrer" class="faq-link">form</a>, and the undergraduate assistant will process it promptly. You may enroll in upper division courses after the form is approved.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">I want to take an elective, but it’s not pre-approved.<i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p>Submit a course <a href="https://coursys.sfu.ca/forms/ensc-course-substitutionswaivers/" target="_blank" rel="noopener noreferrer" class="faq-link">substitution waiver</a>. The undergraduate assistant and UCC chair will assess the course. Approval will depend on the course accreditation status, academic unit distribution, and your personal circumstances.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">I am missing a prerequisite, but I took an equivalent course.<i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p>This is generally acceptable. Submit a course <a href="https://coursys.sfu.ca/forms/ensc-course-substitutionswaivers/" target="_blank" rel="noopener noreferrer" class="faq-link">substitution waiver</a>.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">I want to take a course during my co-op term.<i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p>This is allowed if your supervisor approves. After getting written consent from your supervisor, submit a time-conflict <a href="https://coursys.sfu.ca/forms/ensc-time-conflict-request-form/" target="_blank" rel="noopener noreferrer" class="faq-link">request form</a>.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">I want to take an equivalent course in another department.<i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p>Submit a course <a href="https://coursys.sfu.ca/forms/ensc-course-substitutionswaivers/" target="_blank" rel="noopener noreferrer" class="faq-link">substitution waiver</a>. Our department will discourage this unless there are extenuating circumstances. You may also need approval from the other department.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contacts-section">
+                <h3>Contacts</h3>
+                <div class="contacts-grid">
+                    <div class="contact-card">
+                        <h4>Undergraduate Assistant:</h4>
+                        <button class="copy-email-btn" data-email="enscugra@sfu.ca" title="Click to copy email">
+                            <span class="email-text">enscugra@sfu.ca</span>
+                        </button>
+                        <ul>
+                            <li>Can manipulate the ENSC course schedule</li>
+                            <li>Reviews all submitted forms</li>
+                            <li>Can manually enroll you into courses</li>
+                        </ul>
+                    </div>
+                    <div class="contact-card">
+                        <h4>Academic Advising:</h4>
+                        <button class="copy-email-btn" data-email="asadvise@sfu.ca" title="Click to copy email">
+                            <span class="email-text">asadvise@sfu.ca</span>
+                        </button>
+                        <ul>
+                            <li>Can help you plan courses</li>
+                            <li>Sometimes informed about department policies</li>
+                        </ul>
+                    </div>
+                    <div class="contact-card">
+                        <h4>ESSS VP Academic:</h4>
+                        <button class="copy-email-btn" data-email="academic@esss.ca" title="Click to copy email">
+                            <span class="email-text">academic@esss.ca</span>
+                        </button>
+                        <ul>
+                            <li>Fellow good student who is very knowledgeable on course scheduling</li>
+                            <li>Good point of contact if you have an issue that is not addressed</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-left-group">
+                <h3><strong>SFU ESSS</strong></h3>
+                <div class="footer-main-row">
+                    <img src="circleLogo.png" alt="SFU ESSS Logo" class="footer-square-logo">
+                    <div class="address-box">
+                        <p>ESSS Office ASB 8834<br>
+                        8888 University Drive<br>
+                        Burnaby, BC V5A 1S6</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/company/sfu-engineering-science-student-society/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://discord.com/invite/ZmGR88pU8j" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                <a href="https://www.instagram.com/sfuengineers/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const toggleIcon = darkModeToggle.querySelector('i');
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.body.classList.add('dark-mode');
+            toggleIcon.classList.replace('fa-moon', 'fa-sun');
+        }
+
+        darkModeToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.body.classList.toggle('dark-mode');
+
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                toggleIcon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                localStorage.setItem('theme', 'light');
+                toggleIcon.classList.replace('fa-sun', 'fa-moon');
+            }
+        });
+
+        function switchTab(evt, tabName) {
+            const tabContents = document.getElementsByClassName('tab-content');
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove('active');
+            }
+
+            const tabBtns = document.getElementsByClassName('tab-btn');
+            for (let i = 0; i < tabBtns.length; i++) {
+                tabBtns[i].classList.remove('active');
+            }
+
+            document.getElementById(tabName).classList.add('active');
+            evt.currentTarget.classList.add('active');
+        }
+
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const questionBtn = item.querySelector('.faq-question');
+            questionBtn.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+
+                if (!isActive) {
+                    item.classList.add('active');
+                    const answer = item.querySelector('.faq-answer');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                } else {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-answer').style.maxHeight = null;
+                }
+            });
+        });
+
+        const copyEmailButtons = document.querySelectorAll('.copy-email-btn');
+        copyEmailButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const email = button.getAttribute('data-email');
+                navigator.clipboard.writeText(email).then(() => {
+                    const textSpan = button.querySelector('.email-text');
+                    const originalText = textSpan.textContent;
+                    
+                    textSpan.textContent = 'Copied!';
+
+                    setTimeout(() => {
+                        textSpan.textContent = originalText;
+                    }, 1500);
+                }).catch(err => {
+                    console.error('Failed to copy email: ', err);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

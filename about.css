@@ -1,0 +1,290 @@
+/* ==========================================
+   ABOUT PAGE STYLES
+   ========================================== */
+
+.about-main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.about-section {
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    color: #203a6c;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    font-size: 1.05rem;
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+.team-category {
+    margin-top: 35px;
+    margin-bottom: 45px;
+}
+
+.team-category h3 {
+    font-size: 1.5rem;
+    color: #203a6c;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 8px;
+}
+
+.team-interactive-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 30px;
+    align-items: start;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 25px;
+}
+
+.team-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.team-avatar-wrapper {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 14px;
+    background-color: #203a6c;
+}
+
+.team-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.team-card:hover .team-avatar-wrapper {
+    transform: translateY(-4px);
+}
+
+.team-card:hover .team-avatar {
+    transform: scale(1.06);
+}
+
+.team-role-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #203a6c;
+    line-height: 1.3;
+}
+
+.team-side-panel {
+    position: sticky;
+    top: 100px;
+    background: #f8fafc;
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+    padding: 25px;
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.team-side-panel.has-active {
+    background: #ffffff;
+    border: 2px solid #203a6c;
+    border-style: solid;
+}
+
+.side-member-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 8px;
+    width: 100%;
+}
+
+.side-role {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #2563eb;
+    letter-spacing: 0.8px;
+}
+
+.side-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #203a6c;
+    margin: 0;
+}
+
+.side-desc {
+    font-size: 0.9rem;
+    color: #434656;
+    margin: 4px 0 0 0;
+    line-height: 1.5;
+}
+
+.documents-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.doc-group {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.doc-group h3 {
+    font-size: 1.25rem;
+    color: #203a6c;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #cbd5e1;
+    padding-bottom: 8px;
+}
+
+.doc-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.doc-list li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: #434656;
+    text-decoration: none;
+}
+
+.doc-list li a i {
+    color: #203a6c;
+    font-size: 1rem;
+}
+
+.doc-list li a:hover {
+    color: #284785;
+    text-decoration: underline;
+}
+
+.doc-list.text-doc-list li {
+    font-size: 0.9rem;
+    color: #434656;
+    line-height: 1.5;
+}
+
+.doc-list.text-doc-list li a {
+    display: inline;
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+.doc-list.text-doc-list li a:hover {
+    color: #1d4ed8;
+}
+
+body.dark-mode .section-title,
+body.dark-mode .team-category h3,
+body.dark-mode .doc-group h3 {
+    color: #ffffff;
+}
+
+body.dark-mode .section-subtitle {
+    color: #94a3b8;
+}
+
+body.dark-mode .doc-group {
+    background-color: #121212;
+    border-color: #384f75;
+}
+
+body.dark-mode .team-side-panel {
+    border-color: #384f75;
+}
+
+body.dark-mode .team-side-panel.has-active {
+    background: #121212;
+}
+
+body.dark-mode .side-role {
+    color: #60a5fa;
+}
+
+body.dark-mode .side-name {
+    color: #ffffff;
+}
+
+body.dark-mode .side-desc {
+    color: #cbd5e1;
+}
+
+body.dark-mode .team-role-title {
+    color: #ccd3de;
+}
+
+body.dark-mode .team-category h3,
+body.dark-mode .doc-group h3 {
+    border-bottom-color: #384f75;
+}
+
+body.dark-mode .doc-list li a {
+    color: #cbd5e1;
+}
+
+body.dark-mode .doc-list li a i {
+    color: #60a5fa;
+}
+
+body.dark-mode .doc-list.text-doc-list li {
+    color: #cbd5e1;
+}
+
+body.dark-mode .doc-list.text-doc-list li a {
+    color: #60a5fa;
+}
+
+@media (max-width: 1024px) {
+    .documents-container,
+    .team-interactive-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 8px 4px;
+    }
+
+    .team-avatar-wrapper {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 8px;
+    }
+
+    .team-role-title {
+        font-size: 0.75rem;
+    }
+}
