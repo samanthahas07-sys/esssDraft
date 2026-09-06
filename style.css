@@ -26,7 +26,7 @@
     max-width: 750px;
     height: auto;
     animation: heroTextFadeUp 2.0s forwards;
-    background: rgb(132, 148, 174);
+    background: rgb(255, 255, 255);
     border: 1px solid rgba(32, 58, 108, 1);
     padding: 40px;
     border-radius: 20px;
@@ -58,7 +58,7 @@
 
 .hero-subtext {
     font-size: 1.1rem;
-    color: #f1f5f9;
+    color: #203a6c;
     line-height: 1.6;
 }
 

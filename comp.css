@@ -5,6 +5,12 @@
     min-height: calc(100vh - 250px);
 }
 
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(50px) scale(0.97);
+    will-change: opacity, transform;
+}
+
 .page-header {
     text-align: center;
     margin-bottom: 50px;

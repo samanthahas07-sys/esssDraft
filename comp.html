@@ -68,7 +68,7 @@
             </div>
 
             <div class="comp-timeline">
-                <div class="timeline-item">
+                <div class="timeline-item scroll-animate">
                     <div class="timeline-badge"></div>
                     <div class="timeline-content">
                         <h3>Executives Meeting (EM)</h3>
@@ -77,7 +77,7 @@
                     </div>
                 </div>
 
-                <div class="timeline-item">
+                <div class="timeline-item scroll-animate">
                     <div class="timeline-badge"></div>
                     <div class="timeline-content">
                         <h3>President's Meeting (PM)</h3>
@@ -86,7 +86,7 @@
                     </div>
                 </div>
 
-                <div class="timeline-item">
+                <div class="timeline-item scroll-animate">
                     <div class="timeline-badge"></div>
                     <div class="timeline-content">
                         <h3>Annual General Meeting Retreat (AGMR)</h3>
@@ -95,7 +95,7 @@
                     </div>
                 </div>
 
-                <div class="timeline-item">
+                <div class="timeline-item scroll-animate">
                     <div class="timeline-badge"></div>
                     <div class="timeline-content">
                         <h3>Conference on Diversity in Engineering (CDE)</h3>
@@ -104,7 +104,7 @@
                     </div>
                 </div>
 
-                <div class="timeline-item">
+                <div class="timeline-item scroll-animate">
                     <div class="timeline-badge"></div>
                     <div class="timeline-content">
                         <h3>Canadian Engineering Leadership Conference (CELC)</h3>
@@ -113,7 +113,7 @@
                     </div>
                 </div>
 
-                <div class="timeline-item">
+                <div class="timeline-item scroll-animate">
                     <div class="timeline-badge"></div>
                     <div class="timeline-content">
                         <h3>Conference on Sustainability in Engineering (CSE)</h3>
@@ -131,7 +131,7 @@
             </div>
 
             <div class="comp-grid three-col">
-                <div class="comp-card">
+                <div class="comp-card scroll-animate">
                     <div class="comp-img-container">
                         <img src="sfuComp.jpg" alt="SFU Engineering Competition" class="comp-img">
                     </div>
@@ -141,7 +141,7 @@
                     </div>
                 </div>
 
-                <div class="comp-card">
+                <div class="comp-card scroll-animate">
                     <div class="comp-img-container">
                         <img src="wesComp.avif" alt="Western Engineering Competition" class="comp-img">
                     </div>
@@ -151,7 +151,7 @@
                     </div>
                 </div>
 
-                <div class="comp-card">
+                <div class="comp-card scroll-animate">
                     <div class="comp-img-container">
                         <img src="canComp.jpg" alt="Canadian Engineering Competition" class="comp-img">
                     </div>
@@ -208,6 +208,30 @@
                 toggleIcon.classList.replace('fa-sun', 'fa-moon');
             }
         });
+
+        const revealEls = Array.from(document.querySelectorAll('.scroll-animate'));
+
+        function updateReveal() {
+            const vh = window.innerHeight;
+            const start = vh * 0.95;
+            const end = vh * 0.35;
+
+            revealEls.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                let progress = (start - rect.top) / (start - end);
+                progress = Math.min(1, Math.max(0, progress));
+
+                el.style.opacity = progress;
+                el.style.transform = `translateY(${(1 - progress) * 50}px) scale(${0.97 + progress * 0.03})`;
+            });
+        }
+
+        updateReveal();
+        function revealLoop() {
+            updateReveal();
+            requestAnimationFrame(revealLoop);
+        }
+        requestAnimationFrame(revealLoop);
     </script>
 </body>
 </html>
