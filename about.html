@@ -375,6 +375,29 @@
             }
         });
 
+        document.querySelectorAll('.dropdown > .dropbtn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                if (window.innerWidth <= 900) {
+                    const dropdown = this.parentElement;
+                    const content = dropdown.querySelector('.dropdown-content');
+                    
+                    if (content.style.display === 'block') {
+                        content.style.display = 'none';
+                    } else {
+                        document.querySelectorAll('.dropdown-content').forEach(c => c.style.display = 'none');
+                        content.style.display = 'block';
+                        e.preventDefault();
+                    }
+                }
+            });
+        });
+
+        window.addEventListener('click', function(e) {
+            if (!e.target.closest('.dropdown') && window.innerWidth <= 900) {
+                document.querySelectorAll('.dropdown-content').forEach(c => c.style.display = 'none');
+            }
+        });
+
         document.querySelectorAll('.team-interactive-wrapper').forEach(wrapper => {
             const teamCards = wrapper.querySelectorAll('.team-card');
             const sidePanelContent = wrapper.querySelector('.side-panel-content');
