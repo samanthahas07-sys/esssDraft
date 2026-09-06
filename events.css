@@ -1,0 +1,257 @@
+.main-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    min-height: calc(100vh - 250px);
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    color: #203a6c;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.page-header p {
+    font-size: 1.05rem;
+    color: #6c757d;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.events-section {
+    margin-bottom: 60px;
+}
+
+.section-title-box {
+    margin-bottom: 25px;
+}
+
+.section-title-box h2 {
+    font-size: 1.8rem;
+    color: #203a6c;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.section-title-box p {
+    font-size: 0.95rem;
+    color: #6c757d;
+}
+
+.upcoming-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: stretch;
+}
+
+.calendar-wrapper {
+    background-color: #f8f9fa;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.calendar-wrapper iframe {
+    border-radius: 6px;
+    width: 100%;
+}
+
+.upcoming-highlight {
+    background-color: #f8f9fa;
+    border: 1px solid #e1e4e8;
+    border-left: 5px solid #203a6c;
+    border-radius: 8px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.upcoming-highlight h3 {
+    font-size: 1.1rem;
+    color: #203a6c;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.highlight-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.highlight-img-container {
+    width: 100%;
+    height: 180px;
+    background-color: #e1e4e8;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.highlight-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-date {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #8494ae;
+    text-transform: uppercase;
+}
+
+.highlight-card h4 {
+    font-size: 1.2rem;
+    color: #203a6c;
+}
+
+.highlight-card p {
+    font-size: 0.95rem;
+    color: #555c68;
+    line-height: 1.5;
+}
+
+.event-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #203a6c;
+    text-decoration: none;
+}
+
+.event-btn:hover {
+    color: #8494ae;
+    transform: translateX(4px);
+}
+
+.annual-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.annual-card {
+    background-color: #ffffff;
+    border: 1px solid #e1e4e8;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.annual-img-container {
+    width: 100%;
+    height: 240px;
+    background-color: #e1e4e8;
+    overflow: hidden;
+    position: relative;
+}
+
+.annual-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.annual-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 12px;
+}
+
+.annual-content h3 {
+    font-size: 1.25rem;
+    color: #203a6c;
+    font-weight: 700;
+}
+
+.annual-content p {
+    font-size: 0.95rem;
+    color: #555c68;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.annual-action {
+    margin-top: 8px;
+}
+
+.event-action-btn {
+    display: inline-block;
+    background-color: #203a6c;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.event-action-btn:hover {
+    background-color: #284785;
+    transform: translateY(-2px);
+    color: #ffffff;
+}
+
+body.dark-mode .page-header h1,
+body.dark-mode .section-title-box h2,
+body.dark-mode .upcoming-highlight h3,
+body.dark-mode .highlight-card h4,
+body.dark-mode .annual-content h3 {
+    color: #ffffff;
+}
+
+body.dark-mode .page-header p,
+body.dark-mode .section-title-box p,
+body.dark-mode .highlight-card p,
+body.dark-mode .annual-content p {
+    color: #8494ae;
+}
+
+body.dark-mode .calendar-wrapper,
+body.dark-mode .upcoming-highlight,
+body.dark-mode .annual-card {
+    background-color: #121212;
+    border-color: #2a3b5c;
+}
+
+body.dark-mode .upcoming-highlight {
+    border-left-color: #8494ae;
+}
+
+body.dark-mode .event-btn {
+    color: #8494ae;
+}
+
+body.dark-mode .annual-img-container,
+body.dark-mode .highlight-img-container {
+    background-color: #1a2639;
+}
+
+@media (max-width: 900px) {
+    .upcoming-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .annual-grid {
+        grid-template-columns: 1fr;
+    }
+}
