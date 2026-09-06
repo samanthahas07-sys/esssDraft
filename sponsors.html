@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Partners & Sponsors - SFU Engineering Science Student Society</title>
+    <link rel="stylesheet" href="navbar-footer.css">
+    <link rel="stylesheet" href="sponsors.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo-container" aria-label="Home">
+            <img src="navBarLogo.png" alt="SFU Engineering Science Student Society Logo" class="nav-logo">
+        </a>
+        <nav class="nav-links">
+            <div class="dropdown">
+                <a class="dropbtn">Get Involved</a>
+                <div class="dropdown-content">
+                    <a href="meetings.html">Meetings</a>
+                    <a href="clubs.html">Clubs and Teams</a>
+                    <a href="mentor.html">Mentorship Program</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a class="dropbtn">Resources</a>
+                <div class="dropdown-content">
+                    <a href="guide.html">ESSS Guide</a>
+                    <a href="courses.html">Course Information</a>
+                    <a href="scholarFunds.html">Scholarships and Funds</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a class="dropbtn">Events</a>
+                <div class="dropdown-content">
+                    <a href="events.html">Events</a>
+                    <a href="comp.html">Conferences and Competitions</a>
+                    <a href="ironRing.html">Iron Ring</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="merch.html" class="dropbtn">Merch</a>
+            </div>
+            <div class="dropdown">
+                <a href="sponsors.html" class="dropbtn">Our Partners</a>
+            </div>
+            <div class="dropdown">
+                <a class="dropbtn">About</a>
+                <div class="dropdown-content">
+                    <a href="about.html">About Us</a>
+                    <a href="location.html">Location</a>
+                </div>
+            </div>
+            <a href="contactUs.html">Contact Us</a>
+            <a href="#" id="darkModeToggle" aria-label="Toggle Dark Mode"><i class="fa-solid fa-moon"></i></a>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <section class="sponsors-section">
+            <div class="section-title-box">
+                <h2>Thank You to Our Current Sponsors</h2>
+                <p>Their continuous collaboration makes student projects, hackathons, and community initiatives possible.</p>
+            </div>
+
+            <div class="sponsor-grid">
+                <div class="sponsor-card">
+                    <img src="PCBWayLogo.png" alt="Sponsor Logo" class="sponsor-logo">
+                </div>
+            </div>
+        </section>
+
+        <section class="sponsorship-split-cta">
+            <div class="split-cta-content">
+                <h2>Partner With ESSS</h2>
+                <p>We’d love to collaborate with you! By partnering with the ESSS, you help future engineers build hands-on experience, meaningful connections, and an active community. View our sponsorship package and contact our team at sponsorship@esss.ca.</p>
+            </div>
+            <div class="split-cta-visual">
+                <a href="sponsorPackage.pdf" target="_blank" rel="noopener noreferrer" class="stat-card action-card">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <div>
+                        <h3>Sponsorship Package</h3>
+                        <p>View our sponsorship package</p>
+                    </div>
+                </a>
+                <div class="stat-card action-card" id="copyEmailBtn" style="cursor: pointer;" onclick="copyEmailToClipboard()">
+                    <i class="fa-solid fa-paper-plane" id="emailIcon"></i>
+                    <div>
+                        <h3>Email Us</h3>
+                        <p id="emailText">sponsorship@esss.ca</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-left-group">
+                <h3><strong>SFU ESSS</strong></h3>
+                <div class="footer-main-row">
+                    <img src="circleLogo.png" alt="SFU ESSS Logo" class="footer-square-logo">
+                    <div class="address-box">
+                        <p>ESSS Office ASB 8834<br>
+                        8888 University Drive<br>
+                        Burnaby, BC V5A 1S6</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/company/sfu-engineering-science-student-society/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://discord.com/invite/ZmGR88pU8j" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                <a href="https://www.instagram.com/sfuengineers/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const toggleIcon = darkModeToggle.querySelector('i');
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.body.classList.add('dark-mode');
+            toggleIcon.classList.replace('fa-moon', 'fa-sun');
+        }
+
+        darkModeToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.body.classList.toggle('dark-mode');
+
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                toggleIcon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                localStorage.setItem('theme', 'light');
+                toggleIcon.classList.replace('fa-sun', 'fa-moon');
+            }
+        });
+
+        function copyEmailToClipboard() {
+            const email = "sponsorship@esss.ca";
+            navigator.clipboard.writeText(email).then(() => {
+                const emailText = document.getElementById('emailText');
+                const emailIcon = document.getElementById('emailIcon');
+                
+                emailText.textContent = "Copied to clipboard!";
+                emailIcon.classList.replace('fa-paper-plane', 'fa-check');
+                
+                setTimeout(() => {
+                    emailText.textContent = email;
+                    emailIcon.classList.replace('fa-check', 'fa-paper-plane');
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy email: ', err);
+            });
+        }
+    </script>
+</body>
+</html>

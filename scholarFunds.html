@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarships and Funds - SFU Engineering Science Student Society</title>
+    <link rel="stylesheet" href="navbar-footer.css">
+    <link rel="stylesheet" href="scholarFunds.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo-container" aria-label="Home">
+            <img src="navBarLogo.png" alt="SFU Engineering Science Student Society Logo" class="nav-logo">
+        </a>
+        <nav class="nav-links">
+            <div class="dropdown">
+                <a class="dropbtn">Get Involved</a>
+                <div class="dropdown-content">
+                    <a href="meetings.html">Meetings</a>
+                    <a href="clubs.html">Clubs and Teams</a>
+                    <a href="mentor.html">Mentorship Program</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a class="dropbtn">Resources</a>
+                <div class="dropdown-content">
+                    <a href="guide.html">ESSS Guide</a>
+                    <a href="courses.html">Course Information</a>
+                    <a href="scholarFunds.html">Scholarships and Funds</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a class="dropbtn">Events</a>
+                <div class="dropdown-content">
+                    <a href="events.html">Events</a>
+                    <a href="comp.html">Conferences and Competitions</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="merch.html" class="dropbtn">Merch</a>
+            </div>
+            <div class="dropdown">
+                <a href="sponsors.html" class="dropbtn">Our Partners</a>
+            </div>
+            <div class="dropdown">
+                <a class="dropbtn">About</a>
+                <div class="dropdown-content">
+                    <a href="about.html">About Us</a>
+                    <a href="location.html">Location</a>
+                </div>
+            </div>
+            <a href="contactUs.html">Contact Us</a>
+            <a href="#" id="darkModeToggle" aria-label="Toggle Dark Mode"><i class="fa-solid fa-moon"></i></a>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <section class="page-header">
+            <h1>Scholarships and Funds</h1>
+            <p>Explore financial support opportunities, awards, and student project funding available to SFU Engineering Science students.</p>
+        </section>
+
+        <div class="funds-grid">
+            <div class="fund-card">
+                <div class="card-content">
+                    <h2>Engineering Science Student Endowment Fund</h2>
+                    <p>The Engineering Science Student Endowment Fund enhances SFU undergraduate engineering by financially supporting innovative student projects, teams, and initiatives.</p>
+                    <div class="card-action-buttons">
+                        <a href="https://www.esss.ca/_files/ugd/b80c7c_b54a5e3451c64c0089c525a71565e2b6.pdf" target="_blank" rel="noopener noreferrer" class="concentration-btn">View Categories</a>
+                        <a href="https://www.esss.ca/_files/ugd/b80c7c_f8ea2a8bb33c407d950e668a46d49cdc.pdf" target="_blank" rel="noopener noreferrer" class="concentration-btn">Application Form</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fund-card">
+                <div class="card-content">
+                    <h2>SFU Scholarships</h2>
+                    <p>FAS recognizes outstanding academic achievement, leadership, and dedication among engineering students through scholarships each term.</p>
+                    <div class="card-action-buttons">
+                        <a href="https://www.sfu.ca/students/financial-aid/undergraduate/scholarships.html" target="_blank" rel="noopener noreferrer" class="concentration-btn">View SFU Scholarships</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fund-card">
+                <div class="card-content">
+                    <h2>Scholarships Canada</h2>
+                    <p>ScholarshipsCanada is an online platform that helps students discover scholarships, bursaries, and financial aid opportunities across the country.</p>
+                    <div class="card-action-buttons">
+                        <a href="https://www.scholarshipscanada.com/" target="_blank" rel="noopener noreferrer" class="concentration-btn">View Here</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fund-card">
+                <div class="card-content">
+                    <h2>ScholarTree</h2>
+                    <p>ScholarTree is an online platform that matches Canadian students with personalized scholarships and simplifies the application process.</p>
+                    <div class="card-action-buttons">
+                        <a href="https://scholartree.ca/" target="_blank" rel="noopener noreferrer" class="concentration-btn">View Here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-left-group">
+                <h3><strong>SFU ESSS</strong></h3>
+                <div class="footer-main-row">
+                    <img src="circleLogo.png" alt="SFU ESSS Logo" class="footer-square-logo">
+                    <div class="address-box">
+                        <p>ESSS Office ASB 8834<br>
+                        8888 University Drive<br>
+                        Burnaby, BC V5A 1S6</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/company/sfu-engineering-science-student-society/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://discord.com/invite/ZmGR88pU8j" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                <a href="https://www.instagram.com/sfuengineers/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const toggleIcon = darkModeToggle.querySelector('i');
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.body.classList.add('dark-mode');
+            toggleIcon.classList.replace('fa-moon', 'fa-sun');
+        }
+
+        darkModeToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.body.classList.toggle('dark-mode');
+
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                toggleIcon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                localStorage.setItem('theme', 'light');
+                toggleIcon.classList.replace('fa-sun', 'fa-moon');
+            }
+        });
+    </script>
+</body>
+</html>
