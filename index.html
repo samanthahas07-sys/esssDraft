@@ -438,7 +438,7 @@
         async function loadGoogleCalendarEvents() {
             const container = document.getElementById('upcomingEventsList');
             const calendarId = 'c_6fe0aa06a1a6cd4049750a6d96dda952d618d6e746065f873a664e6011c9b14a@group.calendar.google.com';
-            const apiKey = 'AIzaSyCgV6GxfNSbMCu73ZcwvnPXWZrC4ROFkCg';
+            const apiKey = 'AIzaSyCZK3cllXqq9_CrydoY12uVhaZJZvjimoc';
             const apiUrl = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(calendarId)}/events?singleEvents=true&orderBy=startTime&timeMin=${new Date().toISOString()}&maxResults=3&key=${apiKey}`;
 
             try {
