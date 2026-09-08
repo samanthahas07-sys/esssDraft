@@ -149,10 +149,13 @@
         const darkModeToggle = document.getElementById('darkModeToggle');
         const toggleIcon = darkModeToggle.querySelector('i');
 
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        const savedTheme = sessionStorage.getItem('theme');
+        if (savedTheme === 'dark') {
             document.body.classList.add('dark-mode');
             toggleIcon.classList.replace('fa-moon', 'fa-sun');
+        } else {
+            document.body.classList.remove('dark-mode');
+            toggleIcon.classList.replace('fa-sun', 'fa-moon');
         }
 
         darkModeToggle.addEventListener('click', (e) => {
@@ -160,10 +163,10 @@
             document.body.classList.toggle('dark-mode');
 
             if (document.body.classList.contains('dark-mode')) {
-                localStorage.setItem('theme', 'dark');
+                sessionStorage.setItem('theme', 'dark');
                 toggleIcon.classList.replace('fa-moon', 'fa-sun');
             } else {
-                localStorage.setItem('theme', 'light');
+                sessionStorage.setItem('theme', 'light');
                 toggleIcon.classList.replace('fa-sun', 'fa-moon');
             }
         });

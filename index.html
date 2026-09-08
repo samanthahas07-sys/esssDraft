@@ -269,10 +269,13 @@
         const darkModeToggle = document.getElementById('darkModeToggle');
         const toggleIcon = darkModeToggle.querySelector('i');
 
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        const savedTheme = sessionStorage.getItem('theme');
+        if (savedTheme === 'dark') {
             document.body.classList.add('dark-mode');
             toggleIcon.classList.replace('fa-moon', 'fa-sun');
+        } else {
+            document.body.classList.remove('dark-mode');
+            toggleIcon.classList.replace('fa-sun', 'fa-moon');
         }
 
         darkModeToggle.addEventListener('click', (e) => {
@@ -280,10 +283,10 @@
             document.body.classList.toggle('dark-mode');
 
             if (document.body.classList.contains('dark-mode')) {
-                localStorage.setItem('theme', 'dark');
+                sessionStorage.setItem('theme', 'dark');
                 toggleIcon.classList.replace('fa-moon', 'fa-sun');
             } else {
-                localStorage.setItem('theme', 'light');
+                sessionStorage.setItem('theme', 'light');
                 toggleIcon.classList.replace('fa-sun', 'fa-moon');
             }
         });
@@ -435,7 +438,7 @@
         async function loadGoogleCalendarEvents() {
             const container = document.getElementById('upcomingEventsList');
             const calendarId = 'c_6fe0aa06a1a6cd4049750a6d96dda952d618d6e746065f873a664e6011c9b14a@group.calendar.google.com';
-            const apiKey = 'AIzaSyCgV6GxfNSbMCu73ZcwvnPXWZrC4ROFkCg';
+            const apiKey = 'AIzaSyCZK3cllXqq9_CrydoY12uVhaZJZvjimoc';
             const apiUrl = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(calendarId)}/events?singleEvents=true&orderBy=startTime&timeMin=${new Date().toISOString()}&maxResults=3&key=${apiKey}`;
 
             try {
