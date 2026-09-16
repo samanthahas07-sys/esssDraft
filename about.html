@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - SFU Engineering Science Student Society</title>
-    <link rel="icon" type="image/png" href="circleLogo.png">
+    <link rel="icon" type="image/png" href="circleLogo.avif">
     <link rel="stylesheet" href="navbar-footer.css">
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -13,7 +13,7 @@
 
     <header class="navbar">
         <a href="index.html" class="logo-container" aria-label="Home">
-            <img src="navBarLogo.png" alt="SFU Engineering Science Student Society Logo" class="nav-logo">
+            <img src="navBarLogo.avif" alt="SFU Engineering Science Student Society Logo" class="nav-logo">
         </a>
         <nav class="nav-links">
             <div class="dropdown">
@@ -76,13 +76,13 @@
                                 { 
                                     role: "President", 
                                     name: "Noah Thomson", 
-                                    img: "pres.JPG", 
+                                    img: "pres.avif", 
                                     desc: "The president guides the executive council, chairs all meetings and is the official spokesperson for the ESSS. They also enforce and maintain the Constitution, Bylaws, and Policy Manual of the ESSS. Contact through president@esss.ca" 
                                 },
                                 { 
                                     role: "VP Administration", 
                                     name: "Daniel Skournik", 
-                                    img: "vpAdmin.JPG", 
+                                    img: "vpAdmin.avif", 
                                     desc: "The VP Admin oversees access of the ESSS physical and digital spaces, acts as Secretary for all meetings, maintains documentation and archival media of the ESSS, maintains and oversees the ESSS’s website, email server, and social media, and oversees the roles and responsibilities of the Directors of Common Room and Website. Contact through admin@esss.ca" 
                                 },
                                 { 
@@ -106,23 +106,23 @@
                                 { 
                                     role: "VP Social", 
                                     name: "Kayla Lee", 
-                                    img: "vpSocial.JPG", 
+                                    img: "vpSocial.avif", 
                                     desc: "The VP Social forms event committees with Representatives and Society Members when necessary for an event, promotes events and services offered by the ESSS, organizes and fills an events calendar for their upcoming term, and oversees the role and responsibility of the Director of Spirit. Contact through social@esss.ca" 
                                 },
                                 { 
                                     role: "VP Academic", 
                                     name: "Annika Wong", 
-                                    img: "vpAcademic.JPG", 
+                                    img: "vpAcademic.avif", 
                                     desc: "The VP Academic oversees the administration of ESSEF grants, oversees the ESSEF Parts Library, attends all Undergraduate Curriculum Committee meetings, surveys Members for academic concerns to be brought to Undergraduate Curriculum Committee meetings, and oversees the role and responsibility of the Director of Resource Centre. Contact through academic@esss.ca" 
                                 }
                             ];
 
                             execData.forEach((item) => {
-                                const imgSrc = (item.img && item.img.trim() !== "") ? item.img : "circleLogo.png";
+                                const imgSrc = (item.img && item.img.trim() !== "") ? item.img : "circleLogo.avif";
                                 document.write(`
                                     <div class="team-card" data-name="${item.name}" data-role="${item.role}" data-desc="${item.desc}">
                                         <div class="team-avatar-wrapper">
-                                            <img src="${imgSrc}" alt="${item.role}" class="team-avatar" onerror="this.onerror=null; this.src='circleLogo.png';">
+                                            <img src="${imgSrc}" alt="${item.role}" class="team-avatar" onerror="this.onerror=null; this.src='circleLogo.avif';">
                                         </div>
                                         <h4 class="team-role-title">${item.role}</h4>
                                     </div>
@@ -146,7 +146,7 @@
                                 { 
                                   role: "Director of Common Room", 
                                   name: "Lukas Hilton", 
-                                  img: "directCommonRoomOne.JPG",
+                                  img: "directCommonRoomOne.avif",
                                   desc: "Assists the VP Social and VP Administration, oversees maintenance and improvement of the ESSS Common Room." 
                                 },
                                 { 
@@ -158,37 +158,37 @@
                                 { 
                                   role: "Director of Merchandise", 
                                   name: "Maryam Mirzayeva",
-                                  img: "directMerch.jpg", 
+                                  img: "directMerch.avif", 
                                   desc: "Assists the VP Administration and VP Finance, oversees the sales and inventory of all ESSS merchandise, designs new merchandise for ESSS." 
                                 },
                                 { 
                                   role: "Director of Spirit", 
                                   name: "Brent Aguirre",
-                                  img: "directSpiritOne.JPG",
+                                  img: "directSpiritOne.avif",
                                   desc: "Assists VP Social, manages ESSS Social Media such as Facebook, Instagram, Twitter, and Discord, creates promotional material for events offline and online, and updates the Lab 1 Display Case." 
                                 },
                                 { 
                                   role: "Director of Spirit", 
                                   name: "Laksh Soni",
-                                  img: "directSpiritTwo.JPG",
+                                  img: "directSpiritTwo.avif",
                                   desc: "Assists VP Social, manages ESSS Social Media such as Facebook, Instagram, Twitter, and Discord, creates promotional material for events offline and online, and updates the Lab 1 Display Case." 
                                 },
                                 { 
                                   role: "Director of Spirit", 
                                   name: "Aria Law",
-                                  img: "directSpiritThree.jpg",
+                                  img: "directSpiritThree.avif",
                                   desc: "Assists VP Social, manages ESSS Social Media such as Facebook, Instagram, Twitter, and Discord, creates promotional material for events offline and online, and updates the Lab 1 Display Case." 
                                 },
                                 { 
                                   role: "Director of OpFair", 
                                   name: "Angus Gardner", 
-                                  img: "directOpfair.JPG",
+                                  img: "directOpfair.avif",
                                   desc: "Oversees the planning of the annual OpFair, including the coordination of the planning committee and volunteers." 
                                 },
                                 { 
                                   role: "Director of Resources", 
                                   name: "Omar Mohamed", 
-                                  img: "directResourceOne.jpg",
+                                  img: "directResourceOne.avif",
                                   desc: "Assists VP Academic, maintains and operates the ESSS 3D Printer, handles 3D printing requests and orders, assists in the prototype development of student projects, and informs and educates the student body about 3D printing technology." 
                                 },
                                 { 
@@ -200,7 +200,7 @@
                                 { 
                                   role: "Director of Website", 
                                   name: "Samantha Huang", 
-                                  img: "directWebsiteOne.JPG",
+                                  img: "directWebsiteOne.avif",
                                   desc: "Adds content and improves the design of the ESSS Websites. The coolest position :)" 
                                 },
                                 { 
@@ -212,13 +212,13 @@
                                 { 
                                   role: "Director of Graphic Design", 
                                   name: "Katherine Zhang", 
-                                  img: "directGraphic.JPG",
+                                  img: "directGraphic.avif",
                                   desc: "Creates graphic designs for promotional and informational materials, maintains ESSS branding standards, and supports the VP Social, Directors, and Committees." 
                                 },
                                 { 
                                   role: "Director of Student Support", 
                                   name: "Natasha Wilson",
-                                  img: "directStudentOne.JPG",
+                                  img: "directStudentOne.avif",
                                   desc: "Supports tutoring, mentorship, and student support programs. Assists with student concerns referred by the VP Academic as well as maintains appropriate support and referral documentation." 
                                 },
                                 { 
@@ -230,23 +230,23 @@
                                 { 
                                   role: "Director of Sponsorship", 
                                   name: "Alina Beg",
-                                  img: "directSponsorOne.JPG",
+                                  img: "directSponsorOne.avif",
                                   desc: "Retains existing sponsorships and acquires new ones. Communicates with corporate partners and sponsors to support ESSS events and initiatives. Maintains sponsorship agreements, records, and documentation." 
                                 },
                                 { 
                                   role: "Director of Sponsorship", 
                                   name: "Trevor Kwong", 
-                                  img: "directSponsorTwo.JPG",
+                                  img: "directSponsorTwo.avif",
                                   desc: "Retains existing sponsorships and acquires new ones. Communicates with corporate partners and sponsors to support ESSS events and initiatives. Maintains sponsorship agreements, records, and documentation." 
                                 }
                             ];
 
                             directorData.forEach((item) => {
-                                const imgSrc = (item.img && item.img.trim() !== "") ? item.img : "circleLogo.png";
+                                const imgSrc = (item.img && item.img.trim() !== "") ? item.img : "circleLogo.avif";
                                 document.write(`
                                     <div class="team-card" data-name="${item.name}" data-role="${item.role}" data-desc="${item.desc}">
                                         <div class="team-avatar-wrapper">
-                                            <img src="${imgSrc}" alt="${item.role}" class="team-avatar" onerror="this.onerror=null; this.src='circleLogo.png';">
+                                            <img src="${imgSrc}" alt="${item.role}" class="team-avatar" onerror="this.onerror=null; this.src='circleLogo.avif';">
                                         </div>
                                         <h4 class="team-role-title">${item.role}</h4>
                                     </div>
@@ -282,11 +282,11 @@
                             ];
 
                             repData.forEach((item) => {
-                                const imgSrc = (item.img && item.img.trim() !== "") ? item.img : "circleLogo.png";
+                                const imgSrc = (item.img && item.img.trim() !== "") ? item.img : "circleLogo.avif";
                                 document.write(`
                                     <div class="team-card" data-name="${item.name}" data-role="${item.role}" data-desc="${item.desc}">
                                         <div class="team-avatar-wrapper">
-                                            <img src="${imgSrc}" alt="${item.role}" class="team-avatar" onerror="this.onerror=null; this.src='circleLogo.png';">
+                                            <img src="${imgSrc}" alt="${item.role}" class="team-avatar" onerror="this.onerror=null; this.src='circleLogo.avif';">
                                         </div>
                                         <h4 class="team-role-title">${item.role}</h4>
                                     </div>
@@ -337,7 +337,7 @@
             <div class="footer-left-group">
                 <h3><strong>SFU ESSS</strong></h3>
                 <div class="footer-main-row">
-                    <img src="circleLogo.png" alt="SFU ESSS Logo" class="footer-square-logo">
+                    <img src="circleLogo.avif" alt="SFU ESSS Logo" class="footer-square-logo">
                     <div class="address-box">
                         <p>ESSS Office ASB 10855<br>
                         8888 University Drive<br>
